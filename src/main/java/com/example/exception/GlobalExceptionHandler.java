@@ -14,17 +14,30 @@ import java.util.Map;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
+<<<<<<< HEAD
 
+=======
+    // Обработка исключения UsernameNotFoundException
+>>>>>>> origin/main
     public ResponseEntity<String> handleUsernameNotFoundException(UsernameNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 
+<<<<<<< HEAD
+=======
+    // Обработка исключения ResourceNotFoundException
+    // У вас уже должен быть такой класс, если нет, мы его создадим далее
+>>>>>>> origin/main
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<String> handleResourceNotFoundException(ResourceNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 
+<<<<<<< HEAD
 
+=======
+    // Обработка исключений валидации (например, @Valid в DTO)
+>>>>>>> origin/main
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, String>> handleValidationExceptions(MethodArgumentNotValidException ex) {
         Map<String, String> errors = new HashMap<>();
@@ -33,7 +46,11 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
 
+<<<<<<< HEAD
 
+=======
+    // Общий обработчик для всех остальных необработанных исключений
+>>>>>>> origin/main
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleGlobalException(Exception ex) {
         return new ResponseEntity<>("An unexpected error occurred: " + ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);

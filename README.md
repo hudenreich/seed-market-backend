@@ -43,6 +43,7 @@ salam
 ## About order  
 -> He will select his address, bank account info 
 -> Premium or Standard type of accounts will matters to cargo 
+<<<<<<< HEAD
 
 
 
@@ -57,3 +58,5 @@ deploy
 
 
 
+=======
+>>>>>>> origin/main

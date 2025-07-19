@@ -1,10 +1,17 @@
 package com.example.service;
 
 import com.example.dto.SeedDTO;
+<<<<<<< HEAD
 import com.example.entity.Seed;
 import com.example.exception.ResourceNotFoundException;
 import com.example.repository.SeedRepository;
 import com.example.util.Mapper; 
+=======
+import com.example.entity.Seed; // Импорт сущности Seed
+import com.example.exception.ResourceNotFoundException; // Импорт исключения
+import com.example.repository.SeedRepository; // Импорт репозитория Seed
+import com.example.util.Mapper; // Импорт нашего Mapper
+>>>>>>> origin/main
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +21,11 @@ import java.util.stream.Collectors;
 public class SeedServiceImpl implements SeedService {
 
     private final SeedRepository seedRepository;
+<<<<<<< HEAD
     private final Mapper mapper;
+=======
+    private final Mapper mapper; // Внедряем наш Mapper
+>>>>>>> origin/main
 
     public SeedServiceImpl(SeedRepository seedRepository, Mapper mapper) {
         this.seedRepository = seedRepository;

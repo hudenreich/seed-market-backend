@@ -27,7 +27,11 @@ public class DataInitializer implements CommandLineRunner {
     }
 
     @Override
+<<<<<<< HEAD
     @Transactional
+=======
+    @Transactional // <--- ЭТО ОЧЕНЬ ВАЖНО!
+>>>>>>> origin/main
     public void run(String... args) throws Exception {
         initData();
     }

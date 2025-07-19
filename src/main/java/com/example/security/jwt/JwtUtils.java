@@ -16,6 +16,7 @@ import java.util.Date;
 public class JwtUtils {
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
+<<<<<<< HEAD
     @Value("${seedstore.app.jwtSecret}")
     private String jwtSecret;
 
@@ -23,6 +24,15 @@ public class JwtUtils {
     private int jwtExpirationMs;
 
 
+=======
+    @Value("${seedstore.app.jwtSecret}") // Получаем секретный ключ из application.properties
+    private String jwtSecret;
+
+    @Value("${seedstore.app.jwtExpirationMs}") // Получаем время жизни токена из application.properties
+    private int jwtExpirationMs;
+
+    // Метод для генерации JWT токена
+>>>>>>> origin/main
     public String generateJwtToken(Authentication authentication) {
 
         UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
@@ -39,13 +49,21 @@ public class JwtUtils {
         return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtSecret));
     }
 
+<<<<<<< HEAD
 
+=======
+    // Метод для получения имени пользователя из JWT токена
+>>>>>>> origin/main
     public String getUserNameFromJwtToken(String token) {
         return Jwts.parserBuilder().setSigningKey(key()).build()
                 .parseClaimsJws(token).getBody().getSubject();
     }
 
+<<<<<<< HEAD
 
+=======
+    // Метод для валидации JWT токена
+>>>>>>> origin/main
     public boolean validateJwtToken(String authToken) {
         try {
             Jwts.parserBuilder().setSigningKey(key()).build().parse(authToken);

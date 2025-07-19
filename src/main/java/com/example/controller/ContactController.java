@@ -19,7 +19,11 @@ public class ContactController {
 
     @PostMapping
     public ResponseEntity<MessageResponse> submitContactForm(@Valid @RequestBody ContactRequest contactRequest) {
+<<<<<<< HEAD
 
+=======
+        // @Valid гарантирует, что ContactRequest будет провалидирован
+>>>>>>> origin/main
         MessageResponse response = contactService.processContactForm(contactRequest);
         return ResponseEntity.ok(response);
     }

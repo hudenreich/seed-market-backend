@@ -83,6 +83,11 @@ public class SecurityConfig {
                         .requestMatchers("/v3/api-docs/**").permitAll()
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
                         .requestMatchers(
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**",
@@ -109,12 +114,16 @@ public class SecurityConfig {
     public UrlBasedCorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
 
+<<<<<<< HEAD
         configuration.setAllowedOrigins(List.of(
             "http://localhost:3000",
             "http://127.0.0.1:3000",
             "http://localhost:3001",
             "http://127.0.0.1:3001"
         ));
+=======
+        configuration.setAllowedOrigins(List.of("http://localhost:3000", "http://127.0.0.1:3000"));
+>>>>>>> origin/main
 
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 
