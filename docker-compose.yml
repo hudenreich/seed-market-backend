@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16
+    container_name: toxum-postgres
+    environment:
+      POSTGRES_DB: toxumdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build: .
+    container_name: toxum-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/toxumdb
+      DB_USER: postgres
+      DB_PASSWORD: password
+      JWT_SECRET: mysecret
+
+volumes:
+  pgdata:

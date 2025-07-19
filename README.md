@@ -43,3 +43,17 @@ salam
 ## About order  
 -> He will select his address, bank account info 
 -> Premium or Standard type of accounts will matters to cargo 
+
+
+
+
+registr date base not local storage or signin but the database
+dil desteyi 
+toxum bazari + landing page (like azza's(i have a video sample))
+admin panel
+deploy
+
+
+
+
+
